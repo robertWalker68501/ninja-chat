@@ -7,10 +7,7 @@ class ChatUI {
   }
   render(data) {
     // Render chat templates to the DOM
-    const when = dateFns.distanceInWordsToNow(
-      data.created_at.toDate(),
-      { addSuffix: true }
-    );
+    const when = data.created_at.toDate();
     const html = `
       <li class="list-group-item">
         <span class="username">${data.username}: </span>
